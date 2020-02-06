@@ -1,31 +1,31 @@
-# Gale Shapley - Emlakçı Problemi
+# Gale Shapley - EmlakÃ§Ä± Problemi
 
-### Problem tanımı:
+### Problem tanÄ±mÄ±:
 -------------
-Bir Emlakçı, kiralık ev bakan müşterilerine evleri dolaştırır ve ev sahipleriyle tanıştırır. Ardından, kiracılardan baktıkları evleri beğenilerine göre sıralamalarını ister; ev sahiplerinden de kiracıları gözünün tutup tutmamasına göre sıralamasını ister. Sonrasında öncelikle ev sahiplerinin tercihlerini göz önünde bulundurarak, hem ev sahibinin hem de kiracının memnun olacağı (razı olacağı) bir atama yapar. Üniversitede Bilgisayar Mühendisliği eğitimi almış olan bu Emlakçı her iki tarafı da memnun edebilmek için Gale Shapley algoritmasını uygular ve evleri bu şekilde kiraya verir.
+Bir EmlakÃ§Ä±, kiralÄ±k ev bakan mÃ¼ÅŸterilerine evleri dolaÅŸtÄ±rÄ±r ve ev sahipleriyle tanÄ±ÅŸtÄ±rÄ±r. ArdÄ±ndan, kiracÄ±lardan baktÄ±klarÄ± evleri beÄŸenilerine gÃ¶re sÄ±ralamalarÄ±nÄ± ister; ev sahiplerinden de kiracÄ±larÄ± gÃ¶zÃ¼nÃ¼n tutup tutmamasÄ±na gÃ¶re sÄ±ralamasÄ±nÄ± ister. SonrasÄ±nda Ã¶ncelikle ev sahiplerinin tercihlerini gÃ¶z Ã¶nÃ¼nde bulundurarak, hem ev sahibinin hem de kiracÄ±nÄ±n memnun olacaÄŸÄ± (razÄ± olacaÄŸÄ±) bir atama yapar. Ãœniversitede Bilgisayar MÃ¼hendisliÄŸi eÄŸitimi almÄ±ÅŸ olan bu EmlakÃ§Ä± her iki tarafÄ± da memnun edebilmek iÃ§in Gale Shapley algoritmasÄ±nÄ± uygular ve evleri bu ÅŸekilde kiraya verir.
 
-###Kodlama detayları:
+### Kodlama detaylarÄ±:
 -------------
-1. Kiracı sayısı ile ev sayısı (yani ev sahibi sayısı) eşit olacaktır. Her ev sahibinin yalnızca bir evi vardır. Dolayısıyla Kiracılar tutmak istedikleri evleri tercihlerine göre sıralarken aslında bir anlamda Ev sahiplerini sıralamış oluyorlar.
+1. KiracÄ± sayÄ±sÄ± ile ev sayÄ±sÄ± (yani ev sahibi sayÄ±sÄ±) eÅŸit olacaktÄ±r. Her ev sahibinin yalnÄ±zca bir evi vardÄ±r. DolayÄ±sÄ±yla KiracÄ±lar tutmak istedikleri evleri tercihlerine gÃ¶re sÄ±ralarken aslÄ±nda bir anlamda Ev sahiplerini sÄ±ralamÄ±ÅŸ oluyorlar.
 
-2. Kiracıların tercih sıralaması ve ev sahiplerinin tercih sıralaması iki ayrı dosyada verilecektir. Bu dosyaların adı “evsahibitercihi.txt” ve “kiracitercihi.txt” dir. Kodunuzun içinde bu iki dosyayı okuyarak kişilerin tercihlerini öğrenin. Kodunuzun içinde dosyaların adı aynen bu şekilde geçsin. Sakın değiştirmeyin.
+2. KiracÄ±larÄ±n tercih sÄ±ralamasÄ± ve ev sahiplerinin tercih sÄ±ralamasÄ± iki ayrÄ± dosyada verilecektir. Bu dosyalarÄ±n adÄ± â€œevsahibitercihi.txtâ€ ve â€œkiracitercihi.txtâ€ dir. Kodunuzun iÃ§inde bu iki dosyayÄ± okuyarak kiÅŸilerin tercihlerini Ã¶ÄŸrenin. Kodunuzun iÃ§inde dosyalarÄ±n adÄ± aynen bu ÅŸekilde geÃ§sin. SakÄ±n deÄŸiÅŸtirmeyin.
 
-3. Kişi sayısı değişebilir. Kodunuz 3, 4, 5, 6, 7, ... çift insan için de eşleştirmeyi yapabilmeli.
+3. KiÅŸi sayÄ±sÄ± deÄŸiÅŸebilir. Kodunuz 3, 4, 5, 6, 7, ... Ã§ift insan iÃ§in de eÅŸleÅŸtirmeyi yapabilmeli.
 
-4. Okuyacağınız dosyaların formatı aşağıdaki gibidir. Aşağıda 3 kiracı ve 3 ev sahibinin yapmış olduğu tercih sıralamalarını görebilirsiniz.
-evsahibitercihi.txt: (Dosya tablarla ayrılmıştır. Her satır bir ev sahibini temsil etmektedir. Kiracıları en çok istediklerinden en az istediklerine doğru sıralamışlardır.)
+4. OkuyacaÄŸÄ±nÄ±z dosyalarÄ±n formatÄ± aÅŸaÄŸÄ±daki gibidir. AÅŸaÄŸÄ±da 3 kiracÄ± ve 3 ev sahibinin yapmÄ±ÅŸ olduÄŸu tercih sÄ±ralamalarÄ±nÄ± gÃ¶rebilirsiniz.
+evsahibitercihi.txt: (Dosya tablarla ayrÄ±lmÄ±ÅŸtÄ±r. Her satÄ±r bir ev sahibini temsil etmektedir. KiracÄ±larÄ± en Ã§ok istediklerinden en az istediklerine doÄŸru sÄ±ralamÄ±ÅŸlardÄ±r.)
 0 1 2
 1 0 2
 0 1 2
-Bu dosyayı yorumlarsak, 0. Ev sahibi evini en çok 0. Kiracıya, o olmazsa 1. Kiracıya, o da olmazsa 2. Kiracıya vermek istiyor. 1. Ev sahibi evini en çok 1. Kiracıya, o olmazsa 0. Kiracıya, o da olmazsa 2. Kiracıya vermek istiyor. 2. Ev sahibi evini en çok 0. Kiracıya, o olmazsa 1. Kiracıya, o da olmazsa 2. Kiracıya vermek istiyor.
-kiracitercihi.txt: (Dosya tablarla ayrılmıştır. Her satır bir kiracıyı temsil etmektedir. Tutmak istedikleri evleri (dolayısıyla ev sahiplerini) en çok istediklerinden en az istediklerine doğru sıralamışlardır.)
+Bu dosyayÄ± yorumlarsak, 0. Ev sahibi evini en Ã§ok 0. KiracÄ±ya, o olmazsa 1. KiracÄ±ya, o da olmazsa 2. KiracÄ±ya vermek istiyor. 1. Ev sahibi evini en Ã§ok 1. KiracÄ±ya, o olmazsa 0. KiracÄ±ya, o da olmazsa 2. KiracÄ±ya vermek istiyor. 2. Ev sahibi evini en Ã§ok 0. KiracÄ±ya, o olmazsa 1. KiracÄ±ya, o da olmazsa 2. KiracÄ±ya vermek istiyor.
+kiracitercihi.txt: (Dosya tablarla ayrÄ±lmÄ±ÅŸtÄ±r. Her satÄ±r bir kiracÄ±yÄ± temsil etmektedir. Tutmak istedikleri evleri (dolayÄ±sÄ±yla ev sahiplerini) en Ã§ok istediklerinden en az istediklerine doÄŸru sÄ±ralamÄ±ÅŸlardÄ±r.)
 1 0 2
 0 1 2
 0 1 2
-Bu dosyayı yorumlarsak, 0. Kiracı en çok 1. Evi tutmayı istiyor, o olmazsa 0. Evi tutmayı istiyor, o da olmazsa 2. Evi tutmayı istiyor. 1. Kiracı en çok 0. Evi tutmayı istiyor, o olmazsa 1. Evi tutmayı istiyor, o da olmazsa 2. Evi tutmayı istiyor. 2. Kiracı ise en çok 0. Evi tutmayı istiyor, o olmazsa 1. Evi tutmayı istiyor, o da olmazsa 2. Evi tutmayı istiyor.
+Bu dosyayÄ± yorumlarsak, 0. KiracÄ± en Ã§ok 1. Evi tutmayÄ± istiyor, o olmazsa 0. Evi tutmayÄ± istiyor, o da olmazsa 2. Evi tutmayÄ± istiyor. 1. KiracÄ± en Ã§ok 0. Evi tutmayÄ± istiyor, o olmazsa 1. Evi tutmayÄ± istiyor, o da olmazsa 2. Evi tutmayÄ± istiyor. 2. KiracÄ± ise en Ã§ok 0. Evi tutmayÄ± istiyor, o olmazsa 1. Evi tutmayÄ± istiyor, o da olmazsa 2. Evi tutmayÄ± istiyor.
 
-5. Kodunuzu C++ ile Dev C++ IDE’sinde yazınız.
+5. Kodunuzu C++ ile Dev C++ IDEâ€™sinde yazÄ±nÄ±z.
 
-6. Kodunuz precompiled header içermesin.
+6. Kodunuz precompiled header iÃ§ermesin.
 
-7. C++ STL kütüphanesini kullanabilirsiniz.
+7. C++ STL kÃ¼tÃ¼phanesini kullanabilirsiniz.
