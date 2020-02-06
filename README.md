@@ -24,8 +24,3 @@ kiracitercihi.txt: (Dosya tablarla ayrılmıştır. Her satır bir kiracıyı te
 0 1 2
 Bu dosyayı yorumlarsak, 0. Kiracı en çok 1. Evi tutmayı istiyor, o olmazsa 0. Evi tutmayı istiyor, o da olmazsa 2. Evi tutmayı istiyor. 1. Kiracı en çok 0. Evi tutmayı istiyor, o olmazsa 1. Evi tutmayı istiyor, o da olmazsa 2. Evi tutmayı istiyor. 2. Kiracı ise en çok 0. Evi tutmayı istiyor, o olmazsa 1. Evi tutmayı istiyor, o da olmazsa 2. Evi tutmayı istiyor.
 
-5. Kodunuzu C++ ile Dev C++ IDE’sinde yazınız.
-
-6. Kodunuz precompiled header içermesin.
-
-7. C++ STL kütüphanesini kullanabilirsiniz.
